@@ -83,9 +83,9 @@ if [ $ARGDB ]; then
 		if [ -d "$ARGDB" ]; then
 			ARGDB="${ARGDB////}"
 
-			echo $ARGDB
+			echo "estraggo '$ARGF' in '$ARGDB'"
 			echo -n "sto eseguendo il ripristino dei files..........."
-			tar -xvfz "${ARGF}" $ARGDB
+			tar -xvf $ARGF -C $ARGDB
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$ARGDB' non esistente!\n"
@@ -120,9 +120,9 @@ else
 
 		if [ -d "$directory" ]; then
 	
-			echo $ARGF
+			echo "estraggo '$ARGF' in '$directory'"
 			echo -n "sto eseguendo il ripristino dei files..........."
-			tar -xvfz "${ARGF}" $directory
+			tar -xvf $ARGF -C $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
@@ -135,9 +135,9 @@ else
 
 		if [ -d "$directory" ]; then
 
-			echo $ARGF
+			echo "estraggo '$ARGF' in '$directory'"
 			echo -n "sto eseguendo il ripristino dei files..........."
-			tar -xvfz "${FILE}" $directory
+			tar -xvf $ARGF -C $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
