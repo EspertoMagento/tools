@@ -85,10 +85,10 @@ if [ $ARGF ]; then
 
 		if [ -d "$ARGF" ]; then
 			ARGF="${ARGF////}"
-			FILE="backup/$NOW.backup-www-$ARGF.tgz"
+			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar --exclude='$ARGF/var' --exclude='$ARGF/media' -zcf  "${FILE}" $ARGF
+			tar -vcfz "${FILE}" $ARGF
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$ARGF' non esistente!\n"
@@ -119,13 +119,13 @@ else
 				echo -n "Inserisci il nome della cartella di cui vuoi fare il backup: [ENTER]: "
 				read directory
 				echo -e "\n"
-			directory="${directory////}"
+			#directory="${directory////}"
 
 		if [ -d "$directory" ]; then
-			FILE="backup/$NOW.backup-www-$directory.tgz"
+			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar --exclude='$directory/var' --exclude='$directory/media' -zcf  "${FILE}" $directory
+			tar -vcfz  "${FILE}" $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
@@ -134,13 +134,13 @@ else
 
 			else
 		
-		directory="${directory////}"
+		#directory="${directory////}"
 
 		if [ -d "$directory" ]; then
-			FILE="backup/$NOW.backup-www-$directory.tgz"
+			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar --exclude='$directory/var' --exclude='$directory/media' -zcf  "${FILE}" $directory
+			tar -vcfz "${FILE}" $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
