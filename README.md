@@ -17,7 +17,7 @@ This script allows you to backup directory and database.
 ```
 ./backup.sh
 ```
-- Backup a specific directory
+- Run specific directory:
 ```
 ./backup.sh $directory_to_backup
 ```
@@ -26,7 +26,13 @@ This script allows you to backup directory and database.
 
 - Run:
 ```
+./restore.sh
+```
+- Run specific:
+```
 ./restore.sh $backup_file $target_directory
 ```
 
+##3- Optional: Execute script wherever you want
+Copy files to /usr/local/bin and give 755 permission to use script wherever you want.
 
