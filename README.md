@@ -19,7 +19,7 @@ This script allows you to backup directory and database.
 ```
 - Run automatic (ex in cron):
 ```
-./backup.sh $directory_to_backup $target_directory
+./backup.sh $directory_to_backup $database_name (write 0 if you don't backup database)
 ```
 
 ##Restore Tool:
