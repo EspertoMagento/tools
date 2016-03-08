@@ -88,7 +88,7 @@ if [ $ARGF ]; then
 			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar -vcfz "${FILE}" $ARGF
+			tar -cvzf "${FILE}" $ARGF
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$ARGF' non esistente!\n"
@@ -125,7 +125,7 @@ else
 			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar -vcfz  "${FILE}" $directory
+			tar -cvzf  "${FILE}" $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
@@ -140,7 +140,7 @@ else
 			FILE="backup/$NOW.backup-data.tar.gz"
 			echo $FILE
 			echo -n "sto facendo il backup dei files..........."
-			tar -vcfz "${FILE}" $directory
+			tar -cvzf "${FILE}" $directory
 			echo -e "fatto\n"
 		else
 			echo -e "cartella '$directory' non esistente!\n"
