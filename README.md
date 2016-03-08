@@ -17,7 +17,7 @@ This script allows you to backup directory and database.
 ```
 ./backup.sh
 ```
-- Run automatic (ex in cron):
+- Run automatic (ex. with cron. For database credentials change user and psw on line backup.sh:24)
 ```
 ./backup.sh $directory_to_backup $database_name (write 0 if you don't backup database)
 ```
@@ -28,7 +28,7 @@ This script allows you to backup directory and database.
 ```
 ./restore.sh
 ```
-- Run automatic (ex in cron):
+- Run automatic (ex. with cron):
 ```
 ./restore.sh $backup_file $target_directory
 ```
