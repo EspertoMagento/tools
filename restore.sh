@@ -116,7 +116,7 @@ else
 				echo -n "Inserisci il nome della cartella di cui vuoi fare il ripristino: [ENTER]: "
 				read directory
 				echo -e "\n"
-			directory="${directory////}"
+			#directory="${directory////}"
 
 		if [ -d "$directory" ]; then
 	
@@ -131,7 +131,7 @@ else
 
 			else
 		
-		directory="${directory////}"
+		#directory="${directory////}"
 
 		if [ -d "$directory" ]; then
 
