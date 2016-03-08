@@ -17,9 +17,9 @@ This script allows you to backup directory and database.
 ```
 ./backup.sh
 ```
-- Run specific directory:
+- Run automatic (ex in cron):
 ```
-./backup.sh $directory_to_backup
+./backup.sh $directory_to_backup $target_directory
 ```
 
 ##Restore Tool:
@@ -28,7 +28,7 @@ This script allows you to backup directory and database.
 ```
 ./restore.sh
 ```
-- Run specific:
+- Run automatic (ex in cron):
 ```
 ./restore.sh $backup_file $target_directory
 ```
