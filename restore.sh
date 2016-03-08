@@ -104,7 +104,7 @@ else
 
 	if [ 'y' = $bkfiles ]; then
 	
-		echo -n "Inserisci il nome del file compresso di cui vuoi fare il ripristino: [ENTER] (Y - view list): "
+		echo -n "Inserisci il nome della cartella dove vuoi fare il ripristino: [ENTER] (Y - view list): "
 			read directory || exit 1
 		  	case "$directory" in
 		  	[Nn]*) directory =n with=out;;
@@ -113,7 +113,7 @@ else
 
 			if [ 'y' = $directory ]; then
 				echo | ls
-				echo -n "Inserisci il nome del file compresso di cui vuoi fare il ripristino: [ENTER]: "
+				echo -n "Inserisci il nome della cartella dove vuoi fare il ripristino: [ENTER]: "
 				read directory
 				echo -e "\n"
 			#directory="${directory////}"
