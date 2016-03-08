@@ -81,7 +81,7 @@ echo -e "\n********* RESTORE TOOL BY DANIELE CRUPI *********\n"
 if [ $ARGDB ]; then
 
 		if [ -d "$ARGDB" ]; then
-			ARGDB="${ARGDB////}"
+			#ARGDB="${ARGDB////}"
 
 			echo "estraggo '$ARGF' in '$ARGDB'"
 			echo -n "sto eseguendo il ripristino dei files..........."
@@ -95,7 +95,7 @@ if [ $ARGDB ]; then
 else
 	
 	#backup files	
-	echo -n "Vuoi fare il backup dei files? [Y/n]"
+	echo -n "Vuoi fare il ripristino dei files? [Y/n]"
 	read bkfiles || exit 1
   	case "$bkfiles" in
   	[Nn]*) bkfiles=n with=out;;
@@ -104,7 +104,7 @@ else
 
 	if [ 'y' = $bkfiles ]; then
 	
-		echo -n "Inserisci il nome della cartella di cui vuoi fare il ripristino: [ENTER] (Y - view list): "
+		echo -n "Inserisci il nome del file compresso di cui vuoi fare il ripristino: [ENTER] (Y - view list): "
 			read directory || exit 1
 		  	case "$directory" in
 		  	[Nn]*) directory =n with=out;;
@@ -113,7 +113,7 @@ else
 
 			if [ 'y' = $directory ]; then
 				echo | ls
-				echo -n "Inserisci il nome della cartella di cui vuoi fare il ripristino: [ENTER]: "
+				echo -n "Inserisci il nome del file compresso di cui vuoi fare il ripristino: [ENTER]: "
 				read directory
 				echo -e "\n"
 			#directory="${directory////}"
